@@ -18,7 +18,7 @@
                 </ListBox>
                 <WrapPanel>
                 <TextBox x:Name="BlackBoxTextBox" Width="190" Height="48"></TextBox>
-                    <Button Content="Add Black Box" FontSize="11">
+                    <Button Command="{Binding AddBlackBoxCommand}" Content="Add Black Box" FontSize="11">
                         
                     </Button>
                 </WrapPanel>
@@ -28,7 +28,7 @@
 
         <Grid Grid.Column="1">
             <StackPanel>
-                <ListView Height="370"   SelectedItem="{Binding SelectedProcess}" Background="Gray" ItemsSource="{Binding Processes}">
+                <ListView Height="370" x:Name="proceslistox"   SelectedItem="{Binding SelectedProcess}" Background="Gray">
 
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="SelectionChanged">
